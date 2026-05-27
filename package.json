@@ -1,0 +1,46 @@
+{
+  "name": "production-api-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "imports": {
+    "@config/*": "./src/config",
+    "@controllers/*": "./src/controllers",
+    "@middleware/*": "./src/middleware",
+    "@models/*": "./src/models",
+    "@routers/*": "./src/routers",
+    "@services/*": "./src/services",
+    "@utils/*": "./src/utils",
+    "@validations/*": "./src/validations"
+  },
+  "scripts": {
+    "dev": "node --watch ./src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azrinhakimi-dev/production-api-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/azrinhakimi-dev/production-api-express/issues"
+  },
+  "homepage": "https://github.com/azrinhakimi-dev/production-api-express#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "3.8.3"
+  }
+}
