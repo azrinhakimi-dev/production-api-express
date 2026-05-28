@@ -4,17 +4,18 @@
   "description": "",
   "main": "index.js",
   "imports": {
-    "@config/*": "./src/config",
-    "@controllers/*": "./src/controllers",
-    "@middleware/*": "./src/middleware",
-    "@models/*": "./src/models",
-    "@routers/*": "./src/routers",
-    "@services/*": "./src/services",
-    "@utils/*": "./src/utils",
-    "@validations/*": "./src/validations"
+    "#config/*": "./src/config/*.js",
+    "#controllers/*": "./src/controllers/*.js",
+    "#middleware/*": "./src/middleware/*.js",
+    "#models/*": "./src/models/*.js",
+    "#routes/*": "./src/routes/*.js",
+    "#services/*": "./src/services/*.js",
+    "#utils/*": "./src/utils/*.js",
+    "#validations/*": "./src/validations/*.js"
   },
   "scripts": {
-    "dev": "node --watch ./src/index.js",
+    "dev": "node --env-file=.env.development --watch ./src/index.js",
+    "start": "node --env-file=.env.production --watch ./src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
@@ -33,11 +34,18 @@
   },
   "homepage": "https://github.com/azrinhakimi-dev/production-api-express#readme",
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
